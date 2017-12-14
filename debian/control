@@ -1,0 +1,40 @@
+Source: libonig
+Section: libs
+Priority: extra
+Maintainer: Jörg Frings-Fürst <debian@jff.email>
+Build-Depends:
+ debhelper (>= 10)
+Standards-Version: 4.1.2.0
+Homepage: https://github.com/kkos/oniguruma
+Vcs-Git: https://anonscm.debian.org/cgit/collab-maint/libonig.git
+Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/libonig.git
+
+Package: libonig4
+Priority: optional
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
+Pre-Depends:
+ ${misc:Pre-Depends}
+Description: regular expressions library
+ Oniguruma is a library for working with regular expressions.
+ .
+ Different character encoding for every regular expression object can
+ be specified.
+
+Package: libonig-dev
+Section: libdevel
+Priority: optional
+Architecture: any
+Depends:
+ ${misc:Depends},
+ libonig4 (= ${binary:Version})
+Description: regular expressions library — development files
+ Oniguruma is a library for working with regular expressions.
+ .
+ Different character encoding for every regular expression object can
+ be specified.
+ .
+ This package provides development files and static libraries.
